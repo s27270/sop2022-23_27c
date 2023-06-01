@@ -1,0 +1,19 @@
+*Pierwsza seria poleceń*
+Po wpisaniu "bash" zmiennej X nie ma już w pamięci. Polecenie
+bash to taki jakby restart, uruchamia nową powłokę.
+
+*Druga seria poleceń*
+Wpisanie Tekstu dłuższego między ' lub " rozwiązuje problem.
+Bez tego pojawiał sie komunikat, że nie rozumie polecenia
+dłuższy.
+
+*Trzecia seria poleceń*
+roznica miedzy " a ' jest taka, ze jak uzyjemy pojedynczego to $X nie
+bedzie uznane jako zmienna X tylko po prostu jako napis.
+Podwojny interpretuje znaki spejalne, czyli np.
+przy jego uzyciu mozna wywolac zmienna w cudzyoslowiach
+ostatnie przypisanie - Y=tekst:$X tez zadziala (wyswietli zmienna X
+a nie tekst:$X - jakby byla spacja to by nie wyswietlilo.
+
+*Czwarta seria poleceń*
+ten problem rozwiązałam w zadaniu 5a.

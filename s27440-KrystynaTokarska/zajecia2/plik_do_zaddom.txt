@@ -1,0 +1,5 @@
+To jest przykladowy plik do zadania domowego.
+Ma on zapisac moje imie (Krysia) na czerwono.
+Krysia
+Czy mu sie uda? Zobaczymy.
+Pozdrawiam, Krysia!

@@ -1,0 +1,126 @@
+Instrukcja instalacji Debiana
+
+1. Pobrieram VirtualBoxa ze strony virtualbox.org,
+ze strony debian.org pobieram obraz wirtualnej maszyny.
+
+2. Instaluje VirtualBoxa na komputerze, po zainstalowaniu 
+oprogramowania uruchamiam ją, i klikam opcje "Nowa", tworzę maszynę 
+(typ Linux, Wersja Debiana 64-bit) o wybranej przez siebie nazwie.
+
+3. Wybrałem rozmiar pamięci RAM, (najlepiej jeśli rozmiar pamięci RAM
+będzie kojenością potegowania dwójki tzn. np. 1024,2048).
+
+4. Wieram również wersję bez środowiska graficznego, ponieważ na ząjeciach
+nie będziemy wykorzystywać środowiska graficznego.
+
+5. Następnie tworzę nowy dysk twardy (format dysku twardego -VDI).
+VDI - najbardziej kompatibilny,
+VDH - używane przez rozwiązania Microsofta
+VMDK - dla oprogramowania VMWare
+
+6. Wybieram stały rozmiar dysku, ponieważ maszyna działa sprawniej i szybciej
+(nie trzeba czekać podczas pracy maszyny aż przydzieli ona miejsce). Jeśli 
+na komputerze miałbym ograniczone miejsce wybrałbym aby maszyna przydzielała
+miejsce dynamicznie.
+
+Ustawienia maszyny
+
+7. Ustawienia Ogólne ----> Zaawansowane
+-Folder migawek zostawiam bez zmian, ponieważ dzięki migawkom
+można do stanu poprzedniego maszyny.
+-Wspójdzielony schowek, przeglądanie, upuszcznie zostawiam 
+wyłaczone, ponieważ nie bedę miał potrzeby korzystania z nich.
+-Szyfrowanie dysku pozastawiam nie zmienione, gdyż nie mam potrzeby, 
+aby dysk był zaszyfrowany.
+
+System ----> Płyta Główna 
+- z kolejności bootowania odznaczam dyskietkę (nie korzystamy z niej), chcę 
+aby maszyna w pierwszej kolejności uruchamiała sie z dysku twardego, a później 
+z napędu optycznego. 
+- Chipset - opcja pozwala na wybranie wirtualnego chipsetu (pozostawiam domyślne).
+
+System ----> Procesor 
+- Procesor zostawiam jeden, ponieważ na zajeciach nie będzie nam potrzebne więcej
+- Wykorzystanie procesora zostawiam na 100%, nie mam potrzeby ogranicznia.
+
+System ----> Akceleracja 
+- Włączam zagnieżdżone stronicowanie, ponieważ ta opcja powoduje ze wszystko działa 
+szybciej i sprawniej.
+
+Ekran - nie potrzebuje wiekszej ilości monitorów, zdalnego pulpitu nie uruchamiam, ponieważ
+nie będzie mi potrzebny, nie będę nic nagrywał więc opcje z nagrywaniem pozostawiam wyłaczone.
+
+Pamięć - wszystko pozostawiam domyślne.
+
+Dźwięk - wyłączam, nie jest mi potrzbny.
+
+Sieć - włączam tylko jedną kartę sieciową.
+NAT - brak komunikacji pomiędzy maszynami , ale jest z gospodarzem.(wybrałem)
+Mostkowana Karta Sieciowa - maszyna dostanie podobny adres do naszego komputera.
+Sieć Wewnętrzna - możliwość komunikowania się z innymi maszynami w tej sieci.
+Karta Sieci Izolowanej - maszyny działajace w sieci wewnętrznej maja połączenie do gospodarza.
+Sieć NAT - jeśli maszyny są w tej samej sieci, mają połaczenie ze sobą.
+Cloud Network - wersja sieci w chmurze (Oracle).
+Niepodłączony - brak sieci.
+
+Sieć ----> Zaawansowane 
+Pozostawaim domyślne.
+
+Przekierowania portów, portów szeregowych - nie włączam.
+
+8. USB - pozwala przekierować urządzenie do wnętrza maszyny, nie będzie mi potrzebne więc wyłaczam.
+
+9. Udostępnione foldery - nie są mi potrzebne więc wyłaczam tą opcje.
+
+10. Interfejs Użytkownika - pozostawiam domyślne. 
+
+Instalacja Debiana 
+
+1. Podczas pierwszego odpalenia maszyny wyskakują nam do wyboru 3 opcje: 
+Zwykły, Bezgłowy, Oddzielny - wybieram oddzielny.
+Wyskakuje nam okno instalacji wybieram zwykły install, nastepnie przechodzę do opcji maszyny,
+aby odłączyć interfejs graficzny.
+W opcjach zaawansowanych: 
+- Tryb Experta - pozwala ustawić konkretne rzeczy, których nie ustawimy w trybie zwykłym
+- Tryb Rescue - pozwala uruchomić środowisko naprawcze
+
+2. Wybieramy język (ja wybrałem angielski)- ponieważ wszytkie programy wolę w jezyku angielskim.
+
+3. Wybieramy kraj za pomocą other i wyszukujemy Polski. Wybieram standard klawiatury.
+
+4. Pojawia się możliwość nadania imienia, nazwy domeny(wykorzystywane w firmach)
+Nadajemy hasło roota. Nastepnie nadajemy nazwę użytkownika, oraz hasło do konta.
+
+5.Pojawia się partycjonowanie dysku:
+- Guided - use entire disk - używany gdy nie wiemy jak podzielić dysk, wyskakuja nam 3 opcje: 
+- All file s in one partition - jedna partycja
+- Separate /home partition - katalog domowy jako osobna partycja
+- Separate /home /var /tmp partitions - w /var znajdują sie logi, a w /tmp przestrzeń na rzeczy tymczasowe
+- Guided – use entire disk and set up LVM - opcja LVM pozwala na szybką zmianę partycji,
+oraz zebrać kilka dysków
+- Guided – use entire disk and set encrypted LVM - to co wyżej, ale plus szyfrowanie
+- Manual - wszytko ustawiamy ręcznie 
+Zalecane jest stworzenie 2 partycji.
+
+6. Pozostałe opcje
+- Guided partitioning - wracamy do wcześniejszego stanu
+- Configure ISCSI volumes - mozna podłoczyć dyski przez sieć
+Wybieramy dysk
+
+7. Tworzymy tabelę partycji (4 partycje)
+Tworzę 2 partycje, pierwsza ustawiam jako podstawową, pojawiają się możliwości z jakimi systemami 
+plików bedzię używana:
+- ext4 journaling file system - najczęsciej korzystany (ulepszenie ext3) (wybieram)
+- ext3 journaling file system - mniejsza szansa utraty plików przy awarii, wolniejszy (ulepszenie ext2)
+- ext2 file system - przestarzałe 
+- btrfs journaling file system - oparty na drzewie bninarnym
+- JFS journaling file system - obsługiwany przez moduł jądra, rzadko używane 
+- XFS journaling file system - ułatwia odzyskanie plików po awarii
+- FAT 16, FAT 32 - używane w DOS'ie
+- Swap area - typ dla wymiany partycji
+
+8. Wybieramy Polskę na liście państw, oraz Gdańsk na liście serwerów.
+
+9. Pojawia się środowisko graficzne - odznaczam ponieważ nie chcę środowiska graficznego
+
+10. Instalacja zakończyła się pomyślnie. 

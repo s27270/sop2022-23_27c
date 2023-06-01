@@ -8,3 +8,76 @@ Na dzisiejszych zajęciach nauczyłam się tworzyć maszynę wirtualną, ustawia
 czasu na omówienie wszystkich aspektów w maszynie wirtualnej (tworzyliśmy ją w pierwszym semestrze, dużo opcji powinniśmy już znać). Przez to na instalację, czyli tak naprawdę główny punkt zostało mało czasu, który bardziej by się przydał (np. na omówienie wszystkich dostępnych opcji, część jest naprawdę ciężko znaleźć w zrozumiałej formie w internecie).
 
 3. Oprócz tego instalacja była zrozumiała i cieszę się, że w przyszłości będę już umiała to zrobić.
+
+2023-03-18
+
+Na zajeciach uczylismy sie pisac skrypty w bashu. Bylo ok, wiekszosc omawialismy
+na UKOSach w poprzednim semestrze, ale dobrze to sobie powtorzyc. Zauwazylam,
+ze czesto niestety robie cos dluzej niz trzeba. Chce nad tym pracowac i mam
+nadzieje ze mi sie uda :)
+
+2023-04-01
+
+Na dzisiejszych zajęciach uczyliśmy się:
+1. Instrukcji if - ona byla mi już znana, wiec raczej nie miałam wiekszych
+problemow.
+2. Petli for - tu tez bylo mi to raczej znane. Ja preferuje pisac w koeljnych
+liniach, nie do konca wiedzialam ze mozna wszystko w jednej.
+3. Tablic - tutaj byla to nowosc, wiec juz musiala troche poszukac i pomylsec
+jednak udalo mi sie zrobic zadania z cwiczen 2
+4. Funkcji - byla to dla mnie zupelna nowosc (w bashu oczywiscie), ale chyba 
+sobie poradzilam, chociaz jedna moja funkcja nie dziala i za nic nie wiem
+dlczaego. Bede dopytywac na zajeciach.
+
+Do domu bylo bardzo przyjemne zadanie korzystania z wyrazen regularnych.
+Nie jestem w tym zbyt dobra wiec dobrze pocwiczyc. W ostatnim punkcie,
+sprawdzanie czy podany argument jest mailem pomoglo mi postawienie poczatku
+i konca linii - nie wiem nadal czemu, ale nagle wszystko dzialano
+(podawalam przy testowaniu mail bez zadnych ' ani ")
+
+2023-04-22
+
+Na dzisiejszych zajeciach byl wstep do C. Nie bylo to latwe, czulam ogromny
+przeskok w poziomie trudnosci. Mase czasu spedzilam szukajac informacji w 
+internecie.Pierwsze zadania byly ok, narysowalam choinke, nie mialam tez
+duzych trudnosci z programem wczytujacym i wypisujacym liczby w odwrotnej
+kolejnosci.
+Program ktory wyswietli plik jak w heksedytorze byl skomplikowany o tyle,
+ze nawet nie wiedzialam od czego zaczac. Pozniej, jak z pomoca internetu 
+udalo mi sie cos stworzyc, to juz rozumialam o co chodzi.
+Kolejne zadanie z wskazniakmi do funkcji, no i tutaj mialam problem ze
+zrozumieniem samego polecenia. Nie wiedzialam co to ejst to v, czemu nagle
+sie pojawilo, nie wiedzialam czy to ma byc ta liczba co okresla ID funkcji,
+czy ta co okresla liczbe elementow jaka chcemy podac, nic. Dlugo siedzialam
+i znowu z pomoca udalo mi sie zrobic, powiedzialabym nawet ze widze w tym
+sens i zastosowanie, ale bylo to trudne.
+
+Niestety zupelnie nie wiem jak zabrac sie do zadania domowego (oprocz ciagu
+Fibonacciego, ale to juz robilismy na jakichs poprzednich zajeciach), bo
+niestety nie rozumiem polecenia. Oczywiscie po wpisaniu w chat GPT otrzymalam
+przykladowe rozwiazanie, ale za nic go nie rozumiem. Brakuje mi tu teorii,
+nie mielismy opisanych struktur danych, na wykladzie nie bylo nawet nic 
+blisko tego, wiec to dla mnie czarna magia. Bardzo by pomoglo, jakbysmy 
+mogli zrobic to zadanie na zajeciach. Ja tez do konca nie rozumiem co to
+znaczy, ze program ma implementowac liste. Tzn ze jak go wywolamy to cos doda
+do listy, ktora napiszemy recznie? Bylabym wdzieczna za wyjasnienie tego na 
+zajeciach.
+
+update: troche pogooglalam, torche poszukalam i jakos sie udalo, nawet 
+moge powiedziec ze rozumiem jak to dziala :)
+
+
+2023-05-06
+
+Zadania z procesow robilam na zajeciach, sporo mi to dalo, ciesze sie, ze sie
+zglosilam. Jednak bardzo duzo dalo mi zrobienie zadania domowego (z tym 
+rysowaniem drzewa procesow). Chcialam je zrobic modyfikujac kod z zadania 5 
+robiac petle w petli, ale cos mi nie dzialalo, tworzylo mi sie duzo za duzo
+procesow, wiec znowu troche poszukalam i napisalam od nowa. Nie rozumiem 
+tylko jednej rzeczy - generowalam procesy w petli gdzie i przyjmowalo 
+najpierw 0 a pozniej 1, a jak robilam wersje testowa, gdzie wypisywalam nr
+procesu (i+1) i pid oraz ppid to jako pierwszy drukowal sie proces nr 2 (i=1)
+a pozniej proces 1 (i=0). Dlaczego drukowaly sie w odwrotnej kolejnosci? Taka
+sytuacja miala miejsce zarowno w przypadku procesow dzieci jak i wnukow.
+(Na wykresie nie widac ktory byl ktory, bo drukuje tylko pid i ppid, ale tak
+bylo jak testowalam)
